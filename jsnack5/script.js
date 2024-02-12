@@ -1,32 +1,39 @@
-
 /*
-Snack 3:
-Scrivi una funzione che accetti tre argomenti:
-un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array).
+Snack 5 (bonus):
+
+Scrivi una funzione che accetti una stringa come parametro e 
+
+restituisca la stessa stringa ma con le iniziali delle parole tutte in maiuscolo
 
 */
 
-let numberArray = [0,1,2,3,4,5,6];
+
+const str = "nel mezzo del cammin di nostra vita.";
+
+const stringToArray = str.split(" ");
 
 
-const rangeArray = function (array , min , max){
+const conversion =  function (word){
 
-    let mixArray = [];
-    
+    for (i = 0; i < word.length; i++){
 
-    for( let i = min; i <= max; i++){
+        word[i] = word[i].charAt(0).toUpperCase() + word[i].substring(1);
 
-        mixArray.push(array[i])
-
+        
     }
 
-    return mixArray;
+    const newString = word.join(" ");
+    
+    return newString;
 };
 
-let newArray = rangeArray(numberArray, 2, 5)
-console.log(newArray)
+let finalConversion = conversion(stringToArray)
 
-document.getElementById("result").innerHTML = `Il numero degli elementi è ${newArray}`
+document.getElementById("result").innerHTML = `Questo è il risultato: ${finalConversion}`;
 
-// console.log(rangeArray(mixArrry, 2,5))
+console.log(finalConversion)
+
+
+
+
 
