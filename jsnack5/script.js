@@ -1,4 +1,5 @@
 /*
+
 Snack 5 (bonus):
 
 Scrivi una funzione che accetti una stringa come parametro e 
